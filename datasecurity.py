@@ -22,7 +22,7 @@ if "lockout_time" not in st.session_state:
 
 #IF DATA IS LOAD
 def load_data():
-    if os.exists(DATA_FILE):
+    if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r") as f:
             return json.load(f)
         return{}
